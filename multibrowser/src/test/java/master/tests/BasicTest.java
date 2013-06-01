@@ -1,3 +1,7 @@
+package src.test.java.master.tests;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -20,11 +24,12 @@ import static junit.framework.Assert.assertEquals;
 public class BasicTest {
 
     private WebDriver driver;
+    private final Logger logger = LoggerFactory.getLogger( BasicTest.class );
 
     @Before
     public void setUp() throws Exception {
         String fileName = System.getProperty("fileName");
-        System.out.println("Reading config file : " + fileName);
+        logger.info("Reading config file : " + fileName);
         DesiredCapabilities capabillities = DesiredCapabilities.firefox();
         capabillities.setCapability("version", "5");
         capabillities.setCapability("platform", Platform.XP);
