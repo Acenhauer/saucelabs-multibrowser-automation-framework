@@ -1,20 +1,17 @@
 package src.test.java.master.tests;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import static junit.framework.Assert.assertEquals;
+
+import java.net.URL;
+
+import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.TestName;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import java.net.URL;
-
-import static junit.framework.Assert.assertEquals;
 
 /**
  * Simple {@link RemoteWebDriver} test that demonstrates how to run your Selenium tests with <a href="http://saucelabs.com/ondemand">Sauce OnDemand</a>.
@@ -24,7 +21,7 @@ import static junit.framework.Assert.assertEquals;
 public class BasicTest {
 
     private WebDriver driver;
-    private final Logger logger = LoggerFactory.getLogger( BasicTest.class );
+    private final Logger logger = Logger.getLogger( BasicTest.class );
 
     @Before
     public void setUp() throws Exception {
@@ -38,8 +35,10 @@ public class BasicTest {
                 capabillities);
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void webDriver() throws Exception {
+        logger.info("Reading config file : " + System.getProperty("fileName"));
         driver.get("http://www.amazon.com/");
         assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", driver.getTitle());
     }
