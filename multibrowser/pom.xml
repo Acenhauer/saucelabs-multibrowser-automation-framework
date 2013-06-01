@@ -46,6 +46,12 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <redirectTestOutputToFile>true</redirectTestOutputToFile>
+					<systemPropertyVariables>
+							  <property>
+								 <name>fileName</name>
+								 <value>${fileName}</value>
+							  </property>
+					</systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>

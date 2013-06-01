@@ -1,4 +1,3 @@
-package tests;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -24,7 +23,8 @@ public class BasicTest {
 
     @Before
     public void setUp() throws Exception {
-
+        String fileName = System.getProperty("fileName");
+        System.out.println("Reading config file : " + fileName);
         DesiredCapabilities capabillities = DesiredCapabilities.firefox();
         capabillities.setCapability("version", "5");
         capabillities.setCapability("platform", Platform.XP);
