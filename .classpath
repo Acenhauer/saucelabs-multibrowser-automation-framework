@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="src" path="multibrowser/src/test/java/master"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/guillem/saucelabs-multibrowser-automation-framework/multibrowser/lib/selenium-server-standalone-2.32.0.jar"/>
-	<classpathentry kind="lib" path="/home/guillem/saucelabs-multibrowser-automation-framework/multibrowser/lib/testng.jar"/>
-	<classpathentry kind="output" path="multibrowser/target/test-classes"/>
-</classpath>
