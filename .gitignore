@@ -1,4 +1,7 @@
 *.class
+.classpath
+.project
+multibrowser/target/*
 
 # Package Files #
 *.jar
