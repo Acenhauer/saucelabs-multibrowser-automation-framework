@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<<<<<<< HEAD
 <testsuite failures="0" time="14.372" errors="0" skipped="0" tests="1" name="WebDriverTest">
+=======
+<testsuite failures="0" time="13.596" errors="0" skipped="0" tests="1" name="WebDriverTest">
+>>>>>>> 6e21092ac03f7c0bbdcf8033ec553488499ab28a
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64"/>
@@ -29,7 +33,11 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="51.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+<<<<<<< HEAD
     <property name="os.version" value="3.8.0-23-generic"/>
+=======
+    <property name="os.version" value="3.8.0-22-generic"/>
+>>>>>>> 6e21092ac03f7c0bbdcf8033ec553488499ab28a
     <property name="user.home" value="/home/guillem"/>
     <property name="user.timezone" value="Europe/Andorra"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
@@ -57,5 +65,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
+<<<<<<< HEAD
   <testcase time="14.285" classname="WebDriverTest" name="webDriver"/>
+=======
+  <testcase time="13.595" classname="WebDriverTest" name="webDriver"/>
+>>>>>>> 6e21092ac03f7c0bbdcf8033ec553488499ab28a
 </testsuite>
