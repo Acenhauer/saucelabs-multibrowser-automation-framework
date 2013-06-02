@@ -2,50 +2,25 @@ package src.test.java.master.tests;
 
 import static junit.framework.Assert.assertEquals;
 
-import java.net.URL;
-
 import org.apache.log4j.Logger;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
 
-/**
- * Simple {@link RemoteWebDriver} test that demonstrates how to run your Selenium tests with <a href="http://saucelabs.com/ondemand">Sauce OnDemand</a>.
- * *
- * @author Ross Rowe
- */
-public class BasicTest {
+import src.test.java.master.framework.RemoteWebDriverHandling;
 
-    private WebDriver driver;
-    private final Logger logger = Logger.getLogger( BasicTest.class );
+@Test
+public class BasicTest extends RemoteWebDriverHandling {
 
-    @Before
-    public void setUp() throws Exception {
-        String fileName = System.getProperty("fileName");
-        logger.info("Reading config file : " + fileName);
-        DesiredCapabilities capabillities = DesiredCapabilities.firefox();
-        capabillities.setCapability("version", "5");
-        capabillities.setCapability("platform", Platform.XP);
-        this.driver = new RemoteWebDriver(
-                new URL("http://guillemhs:cb7e8aba-a39f-4456-92d4-abe76dc87021@ondemand.saucelabs.com:80/wd/hub"),
-                capabillities);
-    }
+	private final Logger logger = Logger.getLogger(BasicTest.class);
 
-    @SuppressWarnings("deprecation")
+	@SuppressWarnings("deprecation")
 	@Test
-    public void webDriver() throws Exception {
-        logger.info("Reading config file : " + System.getProperty("fileName"));
-        driver.get("http://www.amazon.com/");
-        assertEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more", driver.getTitle());
-    }
-
-    @After
-    public void tearDown() throws Exception {
-        driver.quit();
-    }
-
+	public void testBasic() throws Exception {
+		driver = setUp();
+		logger.info("BasicTest execution");
+		driver.get("http://www.amazon.com/");
+		assertEquals(
+				"Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more",
+				driver.getTitle());
+		tearDown(driver);
+	}
 }

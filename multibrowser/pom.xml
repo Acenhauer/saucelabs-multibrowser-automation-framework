@@ -97,7 +97,11 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8.5</version>
+		</dependency>
 
 	</dependencies>
 
@@ -144,10 +148,8 @@
 					<skip>${maven-surefire.test-skip}</skip>
 					<redirectTestOutputToFile>${maven-surefire.tofile}</redirectTestOutputToFile>
 					<systemPropertyVariables>
-						<property>
-							<name>fileName</name>
-							<value>${fileName}</value>
-						</property>
+						<user>guillemhs</user>
+						<apikey>cb7e8aba-a39f-4456-92d4-abe76dc87021</apikey>
 					</systemPropertyVariables>
 				</configuration>
 			</plugin>
