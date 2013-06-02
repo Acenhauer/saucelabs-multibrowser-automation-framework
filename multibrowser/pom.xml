@@ -150,6 +150,10 @@
 					<systemPropertyVariables>
 						<user>guillemhs</user>
 						<apikey>cb7e8aba-a39f-4456-92d4-abe76dc87021</apikey>
+						<browser>${browser}</browser>
+						<platform>${platform}</platform>
+						<version>${version}</version>
+						<deviceType>${deviceType}</deviceType>
 					</systemPropertyVariables>
 				</configuration>
 			</plugin>
